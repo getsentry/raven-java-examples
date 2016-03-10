@@ -11,7 +11,7 @@ class HelloController {
         try {
             1 / 0
         } catch (Exception e) {
-            log.error("Caught excetion!", e)
+            log.error("Caught exception!", e)
         }
 
         render "hello, world!"
