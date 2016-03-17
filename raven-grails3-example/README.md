@@ -15,7 +15,7 @@ Now, visit `http://localhost:8080/hello/index` in your browser and an
 `SENTRY_DSN`.
 
 See
-[grails-app/conf/logback.groovy](https://github.com/getsentry/raven-java-examples/blob/grails-example/raven-grails3-example/grails-app/conf/logback.groovy#L14)
+[grails-app/conf/logback.groovy](https://github.com/getsentry/raven-java-examples/blob/grails-example/raven-grails3-example/grails-app/conf/logback.groovy#L14-L15)
 for example logger configuration and
 [build.gradle](https://github.com/getsentry/raven-java-examples/blob/grails-example/raven-grails3-example/build.gradle#L44)
 for the dependency on `com.getsentry.raven:raven-logback`.
