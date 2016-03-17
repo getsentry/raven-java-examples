@@ -9,10 +9,9 @@ appender('STDOUT', ConsoleAppender) {
     }
 }
 
-appender('Sentry', SentryAppender) // Register the Sentry appender
-
 root(ERROR, ['STDOUT'])
 
+appender('Sentry', SentryAppender) // Register the Sentry appender
 root(WARN, ['Sentry']) // Send WARN and above to Sentry
 
 def targetDir = BuildSettings.TARGET_DIR
