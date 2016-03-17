@@ -14,4 +14,5 @@ Now, visit `http://localhost:8080/hello/index` in your browser and an
 `ERROR` message should be sent to the Sentry server you point to in your 
 `SENTRY_DSN`.
 
-See `grails-app/conf/logback.groovy` for example configuration.
+See `grails-app/conf/logback.groovy` for example logger configuration and
+`build.gradle` for the dependency on `com.getsentry.raven:raven-logback`.
