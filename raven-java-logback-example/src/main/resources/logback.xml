@@ -7,7 +7,6 @@
   </appender>
 
   <appender name="Sentry" class="com.getsentry.raven.logback.SentryAppender">
-      <environment>dev</environment>
   </appender>
 
   <root level="debug">
