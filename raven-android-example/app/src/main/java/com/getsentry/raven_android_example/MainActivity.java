@@ -14,11 +14,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Raven.init(this.getApplicationContext(),
-                "YOUR_DSN_HERE");
-        Raven.capture("Test message");
-
         super.onCreate(savedInstanceState);
+
+        Raven.init(this.getApplicationContext());
+
+        Raven.capture("Test message.");
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
