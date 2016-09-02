@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.getsentry.raven.android.DSN"
+            android:value="YOUR_DSN_HERE"/>
     </application>
 
 </manifest>
