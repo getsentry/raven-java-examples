@@ -16,9 +16,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Initialize the Raven client
         Raven.init(this.getApplicationContext());
 
-        Raven.capture(new RuntimeException("Exception."));
+        // Manually catch and send an exception
+        try {
+            int x = 1 / 0;
+        } catch (Exception e) {
+            Raven.capture(e);
+        }
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -28,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                throw new RuntimeException("Test error from raven-android");
+                // Clicking this will throw an unhandled exception that Raven will send to the Sentry server
+                throw new RuntimeException("Button press caused an exception!");
             }
         });
     }
