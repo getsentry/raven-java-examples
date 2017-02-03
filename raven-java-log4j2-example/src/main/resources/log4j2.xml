@@ -2,7 +2,11 @@
 <configuration status="warn" packages="org.apache.logging.log4j.core,com.getsentry.raven.log4j2">
 
     <appenders>
-        <Raven name="Sentry"></Raven>
+        <Raven name="Sentry">
+            <Filters>
+                <ThresholdFilter level="WARN" onMatch="ACCEPT" />
+            </Filters>
+        </Raven>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
