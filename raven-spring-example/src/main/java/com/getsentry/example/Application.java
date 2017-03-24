@@ -13,25 +13,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableAutoConfiguration
 @SpringBootApplication
 public class Application {
-	private static final Logger logger = LoggerFactory.getLogger(Application.class);
+    private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
-	@RequestMapping("/")
-	@ResponseBody
-	String home() {
-		logger.debug("Debug message");
-		logger.info("Info message");
-		logger.warn("Warn message");
+    @RequestMapping("/")
+    @ResponseBody
+    String home() {
+        logger.debug("Debug message");
+        logger.info("Info message");
+        logger.warn("Warn message");
 
-		try {
-			int example = 1 / 0;
-		} catch (Exception e) {
-			logger.error("Caught exception!", e);
-		}
+        try {
+            int example = 1 / 0;
+        } catch (Exception e) {
+            logger.error("Caught exception!", e);
+        }
 
-		return "Hello World!";
-	}
+        return "Hello World!";
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
